@@ -1,29 +1,98 @@
-# baseball-player-performance
-Analyzing the correlation between MLB player salaries and performance metrics using the Lahman Baseball Database (1871-2022). The project includes data preparation, exploratory data analysis, correlation and regression modeling, cluster analysis, and a comparison of Hall of Fame inductees vs. non-inductees.
+# Baseball Player Performance Analysis
 
-# Repository Structure 
+## Overview
+
+This project, developed by Winston Ludlam, a freelance data analyst, aims to analyze and visualize the performance of baseball players using historical data. The goal is to uncover insights into player performance metrics, salary distributions, and factors influencing Hall of Fame inductions.
+
+## Objectives
+
+The primary objectives of this project are:
+1. To understand the relationship between various performance metrics and player salaries.
+2. To identify key performance indicators that correlate with higher salaries.
+3. To analyze the characteristics and performance metrics of Hall of Fame inductees.
+4. To cluster players based on their performance metrics for further insights.
+
+## Methodology
+
+### Data Collection
+
+The data used in this analysis comes from historical baseball performance records, including:
+- Batting statistics
+- Pitching statistics
+- Fielding statistics
+- Salary data
+- Hall of Fame induction records
+- Consumer Price Index (CPI) for salary adjustment
+
+### Research Questions
+
+1. What are the key performance metrics that correlate with higher player salaries?
+2. How do the performance metrics of Hall of Fame inductees differ from non-inductees?
+3. Can we cluster players into meaningful groups based on their performance metrics?
+4. How have player salaries evolved over time when adjusted for inflation?
+
+### Analysis and Visualization
+
+#### Data Cleaning and Preprocessing
+- Merging multiple data sources.
+- Filtering data to include only relevant years (1920-2013).
+- Adjusting salaries for inflation using CPI data.
+- Handling missing values and outliers.
+
+#### Correlation Analysis
+- Calculating and visualizing the correlation matrix to identify relationships between performance metrics and salaries.
+
+#### Regression Analysis
+- Performing regression analysis to quantify the impact of specific performance metrics on salaries.
+- Visualizing regression results to highlight significant predictors.
+
+#### Cluster Analysis
+- Applying clustering algorithms (e.g., K-Means) to group players based on performance metrics.
+- Visualizing clusters using dimensionality reduction techniques (e.g., PCA).
+
+#### Hall of Fame Analysis
+- Comparing the performance metrics of Hall of Fame inductees with non-inductees.
+- Visualizing distributions of key metrics for inductees and non-inductees.
+
+## Conclusions
+
+The analysis reveals several key insights:
+
+1. **Salary Correlations**: Certain performance metrics, such as strikeouts (SO), wins (W), and innings pitched (IPouts), show a strong positive correlation with player salaries.
+2. **Regression Findings**: Regression analysis indicates that metrics like batting average and OPS have a significant impact on salaries, highlighting their importance in player valuation.
+3. **Cluster Insights**: Clustering players based on performance metrics helps in identifying groups of players with similar characteristics, providing a deeper understanding of player types.
+4. **Hall of Fame Characteristics**: Hall of Fame inductees generally exhibit superior performance metrics compared to non-inductees, with notable differences in key statistics like home runs (HR) and earned run average (ERA).
+
+## File Structure
+```
 baseball-player-performance/
 ├── data/
-│   ├── lahman_1871-2022.mdb
-│   └── performance_data.csv
+│   ├── core/
+│   │   ├── Batting.csv
+│   │   ├── Pitching.csv
+│   │   ├── Fielding.csv
+│   │   ├── People.csv
+│   ├── contrib/
+│   │   ├── Salaries.csv
+│   │   ├── HallOfFame.csv
+│   ├── cpi.csv
+│   ├── performance_data.parquet
 ├── notebooks/
-│   ├── data_preparation.ipynb
 │   ├── eda.ipynb
-│   ├── correlation_analysis.ipynb
-│   ├── regression_analysis.ipynb
-│   ├── cluster_analysis.ipynb
-│   ├── hall_of_fame_analysis.ipynb
 ├── scripts/
 │   ├── data_preparation.py
-│   ├── eda.py
-│   ├── correlation_analysis.py
-│   ├── regression_analysis.py
-│   ├── cluster_analysis.py
-│   ├── hall_of_fame_analysis.py
-├── reports/
-│   ├── presentation.pptx
-│   └── findings_report.md
-├── .gitignore
 ├── LICENSE
 ├── README.md
-└── requirements.txt
+```
+
+
+## License
+
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+This developer gratefully acknowledges:
+- The [Lahman Baseball Database](http://seanlahman.com/) for providing the historical data.
+- Professor Rick White at MiraCosta College for his guidance and support.
+- All the ball players who have been joyfully generating these data and the statisticians (both amateur and professional) who have been faithfully compiling and querying the database for more than 180 years.
