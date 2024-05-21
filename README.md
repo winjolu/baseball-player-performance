@@ -93,6 +93,7 @@ This project is licensed under the GNU General Public License v3.0. See the [LIC
 ## Acknowledgments
 
 This developer gratefully acknowledges:
-- The [Lahman Baseball Database](http://seanlahman.com/) for providing the historical data.
+- The [Lahman Baseball Database](http://seanlahman.com/) for providing the historical baseball data.
+- The [US Bureau of Labor Statistics](https://www.bls.gov/) for CPI data.
 - Professor Rick White at MiraCosta College for his guidance and support.
 - All the ball players who have been joyfully generating these data and the statisticians (both amateur and professional) who have been faithfully compiling and querying the database for more than 180 years.
